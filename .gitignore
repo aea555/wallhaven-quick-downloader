@@ -29,3 +29,4 @@ build/
 # Raw screenshot captures (local inputs for the store-screenshot-*.png assets)
 download_button_on_picture.png
 popup.png
+popup_turkish.png
