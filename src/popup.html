@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title data-i18n="appName">Wallhaven Quick Downloader</title>
+    <style>
+      @font-face {
+        font-family: "InterVariable";
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: swap;
+        src: url("../fonts/inter-variable.woff2") format("woff2");
+      }
+
+      :root {
+        color-scheme: dark;
+        --accent: #9d6bdd;
+        --accent-mid: #7c4ddb;
+        --accent-deep: #6a3cb5;
+        --text: #ece8f6;
+        --muted: #9b90b5;
+        --hint: #80769a;
+        --card: rgba(255, 255, 255, 0.028);
+        --card-border: rgba(160, 120, 230, 0.12);
+        --field: rgba(255, 255, 255, 0.04);
+        --field-border: rgba(157, 107, 221, 0.22);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+      }
+
+      body {
+        width: 320px;
+        font-family: "InterVariable", system-ui, -apple-system, "Segoe UI",
+          Roboto, sans-serif;
+        font-size: 13px;
+        color: var(--text);
+        background:
+          radial-gradient(130% 90% at 100% 0%, rgba(124, 77, 219, 0.12), transparent 55%),
+          linear-gradient(180deg, #181122 0%, #110c19 100%);
+        letter-spacing: 0.1px;
+      }
+
+      /* ---- Header ---- */
+      .header {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding: 15px 16px;
+        background:
+          radial-gradient(120% 160% at 0% 0%, rgba(140, 77, 219, 0.34), transparent 60%),
+          linear-gradient(135deg, #261a38, #1a1326);
+        border-bottom: 1px solid rgba(157, 107, 221, 0.18);
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset;
+      }
+      .header img {
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(106, 60, 181, 0.55),
+          0 0 0 1px rgba(255, 255, 255, 0.06);
+      }
+      .header .title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.2;
+      }
+      .header .subtitle {
+        font-size: 10.5px;
+        font-weight: 500;
+        color: var(--muted);
+        margin-top: 1px;
+      }
+
+      /* ---- Body / cards ---- */
+      .body {
+        padding: 14px 16px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--card-border);
+        border-radius: 13px;
+        padding: 13px 13px 14px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28),
+          0 1px 0 rgba(255, 255, 255, 0.04) inset;
+      }
+      .card-label {
+        font-size: 10.5px;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        font-weight: 700;
+        color: var(--muted);
+        margin-bottom: 11px;
+      }
+
+      .res {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .times {
+        color: var(--muted);
+        font-weight: 600;
+      }
+      .muted {
+        color: var(--muted);
+        font-size: 11.5px;
+      }
+
+      /* ---- Number fields ---- */
+      input[type="number"] {
+        width: 78px;
+        padding: 8px 10px;
+        font-family: inherit;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text);
+        background: var(--field);
+        border: 1px solid var(--field-border);
+        border-radius: 9px;
+        outline: none;
+        transition: border-color 0.15s ease, box-shadow 0.15s ease,
+          background 0.15s ease;
+      }
+      input[type="number"]:hover {
+        border-color: rgba(157, 107, 221, 0.45);
+      }
+      input[type="number"]:focus {
+        border-color: var(--accent);
+        background: rgba(255, 255, 255, 0.06);
+        box-shadow: 0 0 0 3px rgba(140, 77, 219, 0.2);
+      }
+
+      .row-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 11px;
+      }
+
+      /* ---- Buttons ---- */
+      .btn {
+        font-family: inherit;
+        font-size: 12.5px;
+        font-weight: 600;
+        padding: 7px 13px;
+        border-radius: 9px;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.12s ease, box-shadow 0.15s ease,
+          filter 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+      }
+      .btn:active {
+        transform: translateY(0) scale(0.98);
+      }
+      .btn-ghost {
+        color: #d4c6ee;
+        background: rgba(157, 107, 221, 0.1);
+        border: 1px solid rgba(157, 107, 221, 0.32);
+      }
+      .btn-ghost:hover {
+        background: rgba(157, 107, 221, 0.2);
+        border-color: var(--accent);
+        transform: translateY(-1px);
+      }
+
+      /* ---- Checkboxes ---- */
+      label.chk {
+        display: flex;
+        gap: 9px;
+        align-items: flex-start;
+        margin-top: 13px;
+        cursor: pointer;
+      }
+      .chk-text {
+        line-height: 1.35;
+      }
+      input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        flex: 0 0 auto;
+        width: 19px;
+        height: 19px;
+        margin: 1px 0 0;
+        border-radius: 6px;
+        border: 1.5px solid rgba(157, 107, 221, 0.5);
+        background: rgba(255, 255, 255, 0.03);
+        display: inline-grid;
+        place-content: center;
+        cursor: pointer;
+        transition: border-color 0.15s ease, background 0.15s ease,
+          box-shadow 0.15s ease;
+      }
+      input[type="checkbox"]::before {
+        content: "";
+        width: 11px;
+        height: 11px;
+        border-radius: 3px;
+        transform: scale(0);
+        transition: transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1);
+        background: linear-gradient(135deg, #b083f0, var(--accent-mid));
+        box-shadow: 0 0 9px rgba(140, 77, 219, 0.7);
+      }
+      input[type="checkbox"]:hover {
+        border-color: var(--accent);
+      }
+      input[type="checkbox"]:checked {
+        border-color: var(--accent);
+        background: rgba(140, 77, 219, 0.14);
+      }
+      input[type="checkbox"]:checked::before {
+        transform: scale(1);
+      }
+      input[type="checkbox"]:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(140, 77, 219, 0.28);
+      }
+
+      .hint {
+        display: block;
+        font-size: 11px;
+        color: var(--hint);
+        margin-top: 3px;
+        white-space: pre-line; /* honor \n line breaks in localized hints */
+      }
+
+      .quality-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .quality-row label {
+        font-weight: 500;
+      }
+      .quality-row input[type="number"] {
+        width: 70px;
+      }
+
+      /* ---- Saved tick ---- */
+      #saved {
+        position: fixed;
+        top: 13px;
+        right: 14px;
+        font-size: 11px;
+        font-weight: 600;
+        color: #c6f7d2;
+        background: rgba(46, 160, 67, 0.2);
+        border: 1px solid rgba(46, 160, 67, 0.42);
+        padding: 3px 9px;
+        border-radius: 999px;
+        opacity: 0;
+        transition: opacity 0.25s ease;
+        pointer-events: none;
+      }
+      [dir="rtl"] #saved {
+        right: auto;
+        left: 14px;
+      }
+      .disclaimer {
+        margin: -2px 16px 14px;
+        font-size: 10px;
+        line-height: 1.4;
+        text-align: center;
+        color: var(--hint);
+        opacity: 0.85;
+      }
+    </style>
+  </head>
+  <body>
+    <span id="saved" data-i18n="savedTick">Saved ✓</span>
+
+    <header class="header">
+      <img src="../icons/icon48.png" alt="" />
+      <div class="head-text">
+        <div class="title" data-i18n="headerTitle">Wallhaven Downloader</div>
+        <div class="subtitle" data-i18n="headerSubtitle">crop &amp; download to your resolution</div>
+      </div>
+    </header>
+
+    <main class="body">
+      <section class="card">
+        <div class="card-label" data-i18n="targetResolution">Target resolution</div>
+
+        <div class="res">
+          <input id="targetW" type="number" min="1" max="30000" step="1" />
+          <span class="times">×</span>
+          <input id="targetH" type="number" min="1" max="30000" step="1" />
+        </div>
+
+        <div class="row-actions">
+          <button id="useScreen" class="btn btn-ghost" type="button" data-i18n="useMyScreen">
+            Use my screen
+          </button>
+          <span id="screenInfo" class="muted"></span>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-label" data-i18n="outputSaving">Output &amp; saving</div>
+
+        <div class="quality-row">
+          <label for="jpegQuality" data-i18n="jpegQuality">JPEG quality</label>
+          <input id="jpegQuality" type="number" min="0.1" max="1" step="0.05" />
+        </div>
+
+        <label class="chk">
+          <input id="saveAs" type="checkbox" />
+          <span class="chk-text">
+            <span data-i18n="askWhereToSave">Ask where to save</span>
+            <span class="hint" data-i18n="askWhereToSaveHint">Opens Chrome's Save dialog each time. Off = straight to Downloads (turn off Chrome's "ask where to save" setting for no prompt).</span>
+          </span>
+        </label>
+      </section>
+    </main>
+
+    <footer class="disclaimer" data-i18n="disclaimer">
+      Unofficial · not affiliated with wallhaven.cc
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

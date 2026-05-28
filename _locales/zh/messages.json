@@ -1,0 +1,20 @@
+{
+  "appDesc": { "message": "一键下载 wallhaven.cc 壁纸，居中裁剪并缩放到你的目标分辨率。" },
+  "headerSubtitle": { "message": "裁剪并下载到你的分辨率" },
+  "targetResolution": { "message": "目标分辨率" },
+  "useMyScreen": { "message": "使用我的屏幕" },
+  "outputSaving": { "message": "输出与保存" },
+  "jpegQuality": { "message": "JPEG 质量" },
+  "askWhereToSave": { "message": "询问保存位置" },
+  "askWhereToSaveHint": { "message": "每次都会打开 Chrome 的保存对话框。关闭 = 直接保存到“下载”文件夹（关闭 Chrome 的“下载前询问每个文件的保存位置”设置即可不再询问）。" },
+  "savedTick": { "message": "已保存 ✓" },
+  "btnDownload": { "message": "按我的分辨率裁剪下载" },
+  "btnDownloading": { "message": "下载中…" },
+  "btnSaved": { "message": "已保存" },
+  "btnError": {
+    "message": "错误：$details$",
+    "placeholders": { "details": { "content": "$1" } }
+  },
+  "downloadFailed": { "message": "下载失败" },
+  "disclaimer": { "message": "非官方 · 与 wallhaven.cc 无关" }
+}

@@ -1,0 +1,20 @@
+{
+  "appDesc": { "message": "wallhaven.cc の壁紙をワンクリックでダウンロード。中央でクロップし、指定した解像度に拡大縮小します。" },
+  "headerSubtitle": { "message": "クロップして解像度に合わせてダウンロード" },
+  "targetResolution": { "message": "目標解像度" },
+  "useMyScreen": { "message": "画面の解像度を使う" },
+  "outputSaving": { "message": "出力と保存" },
+  "jpegQuality": { "message": "JPEG 品質" },
+  "askWhereToSave": { "message": "保存先を確認する" },
+  "askWhereToSaveHint": { "message": "毎回 Chrome の保存ダイアログを開きます。オフ = ダウンロードフォルダに直接保存（確認なしにするには Chrome の「ダウンロード前に各ファイルの保存場所を確認する」設定をオフにしてください）。" },
+  "savedTick": { "message": "保存しました ✓" },
+  "btnDownload": { "message": "自分の解像度にクロップしてダウンロード" },
+  "btnDownloading": { "message": "ダウンロード中…" },
+  "btnSaved": { "message": "保存しました" },
+  "btnError": {
+    "message": "エラー: $details$",
+    "placeholders": { "details": { "content": "$1" } }
+  },
+  "downloadFailed": { "message": "ダウンロードに失敗しました" },
+  "disclaimer": { "message": "非公式 · wallhaven.cc とは無関係" }
+}

@@ -1,0 +1,20 @@
+{
+  "appDesc": { "message": "Lade Hintergrundbilder von wallhaven.cc mit einem Klick herunter – mittig zugeschnitten und auf deine Auflösung skaliert." },
+  "headerSubtitle": { "message": "zuschneiden und in deiner Auflösung herunterladen" },
+  "targetResolution": { "message": "Zielauflösung" },
+  "useMyScreen": { "message": "Meinen Bildschirm verwenden" },
+  "outputSaving": { "message": "Ausgabe & Speichern" },
+  "jpegQuality": { "message": "JPEG-Qualität" },
+  "askWhereToSave": { "message": "Nach Speicherort fragen" },
+  "askWhereToSaveHint": { "message": "Öffnet jedes Mal den Speichern-Dialog von Chrome. Aus = direkt in den Download-Ordner (deaktiviere in Chrome die Einstellung \"Vor dem Download nach dem Speicherort fragen\", um nicht gefragt zu werden)." },
+  "savedTick": { "message": "Gespeichert ✓" },
+  "btnDownload": { "message": "Auf meine Auflösung zugeschnitten herunterladen" },
+  "btnDownloading": { "message": "Wird heruntergeladen…" },
+  "btnSaved": { "message": "Gespeichert" },
+  "btnError": {
+    "message": "Fehler: $details$",
+    "placeholders": { "details": { "content": "$1" } }
+  },
+  "downloadFailed": { "message": "Download fehlgeschlagen" },
+  "disclaimer": { "message": "Inoffiziell · nicht mit wallhaven.cc verbunden" }
+}

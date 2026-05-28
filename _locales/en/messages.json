@@ -1,0 +1,22 @@
+{
+  "appName": { "message": "Wallhaven Quick Downloader" },
+  "appDesc": { "message": "One-click download of wallhaven.cc wallpapers, center-cropped and scaled to your target resolution." },
+  "headerTitle": { "message": "Wallhaven Downloader" },
+  "headerSubtitle": { "message": "crop & download to your resolution" },
+  "targetResolution": { "message": "Target resolution" },
+  "useMyScreen": { "message": "Use my screen" },
+  "outputSaving": { "message": "Output & saving" },
+  "jpegQuality": { "message": "JPEG quality" },
+  "askWhereToSave": { "message": "Ask where to save" },
+  "askWhereToSaveHint": { "message": "Opens Chrome's Save dialog each time. Off = straight to Downloads (turn off Chrome's \"ask where to save\" setting for no prompt)." },
+  "savedTick": { "message": "Saved ✓" },
+  "btnDownload": { "message": "Download cropped to my resolution" },
+  "btnDownloading": { "message": "Downloading…" },
+  "btnSaved": { "message": "Saved" },
+  "btnError": {
+    "message": "Error: $details$",
+    "placeholders": { "details": { "content": "$1" } }
+  },
+  "downloadFailed": { "message": "Download failed" },
+  "disclaimer": { "message": "Unofficial · not affiliated with wallhaven.cc" }
+}

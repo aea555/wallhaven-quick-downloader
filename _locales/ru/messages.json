@@ -1,0 +1,20 @@
+{
+  "appDesc": { "message": "Скачивайте обои с wallhaven.cc в один клик — с обрезкой по центру и масштабированием до нужного разрешения." },
+  "headerSubtitle": { "message": "обрезать и скачать в вашем разрешении" },
+  "targetResolution": { "message": "Целевое разрешение" },
+  "useMyScreen": { "message": "Использовать мой экран" },
+  "outputSaving": { "message": "Вывод и сохранение" },
+  "jpegQuality": { "message": "Качество JPEG" },
+  "askWhereToSave": { "message": "Спрашивать, куда сохранять" },
+  "askWhereToSaveHint": { "message": "Каждый раз открывает диалог сохранения Chrome. Выкл. = сразу в папку «Загрузки» (отключите в Chrome параметр «Всегда указывать место для скачивания», чтобы не спрашивало)." },
+  "savedTick": { "message": "Сохранено ✓" },
+  "btnDownload": { "message": "Скачать с обрезкой под моё разрешение" },
+  "btnDownloading": { "message": "Скачивание…" },
+  "btnSaved": { "message": "Сохранено" },
+  "btnError": {
+    "message": "Ошибка: $details$",
+    "placeholders": { "details": { "content": "$1" } }
+  },
+  "downloadFailed": { "message": "Не удалось скачать" },
+  "disclaimer": { "message": "Неофициальное · не связано с wallhaven.cc" }
+}

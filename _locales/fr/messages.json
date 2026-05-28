@@ -1,0 +1,20 @@
+{
+  "appDesc": { "message": "Téléchargez les fonds d'écran de wallhaven.cc en un clic, recadrés au centre et mis à l'échelle de votre résolution." },
+  "headerSubtitle": { "message": "recadrer et télécharger à votre résolution" },
+  "targetResolution": { "message": "Résolution cible" },
+  "useMyScreen": { "message": "Utiliser mon écran" },
+  "outputSaving": { "message": "Sortie et enregistrement" },
+  "jpegQuality": { "message": "Qualité JPEG" },
+  "askWhereToSave": { "message": "Demander où enregistrer" },
+  "askWhereToSaveHint": { "message": "Ouvre la boîte de dialogue d'enregistrement de Chrome à chaque fois. Désactivé = directement dans Téléchargements (désactivez l'option \"demander où enregistrer chaque fichier\" de Chrome pour ne plus être invité)." },
+  "savedTick": { "message": "Enregistré ✓" },
+  "btnDownload": { "message": "Télécharger recadré à ma résolution" },
+  "btnDownloading": { "message": "Téléchargement…" },
+  "btnSaved": { "message": "Enregistré" },
+  "btnError": {
+    "message": "Erreur : $details$",
+    "placeholders": { "details": { "content": "$1" } }
+  },
+  "downloadFailed": { "message": "Échec du téléchargement" },
+  "disclaimer": { "message": "Non officiel · sans affiliation avec wallhaven.cc" }
+}

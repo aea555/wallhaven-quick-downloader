@@ -1,0 +1,20 @@
+{
+  "appDesc": { "message": "एक क्लिक में wallhaven.cc वॉलपेपर डाउनलोड करें — बीच से क्रॉप और आपके लक्ष्य रिज़ॉल्यूशन पर स्केल किया हुआ।" },
+  "headerSubtitle": { "message": "क्रॉप करें और अपने रिज़ॉल्यूशन पर डाउनलोड करें" },
+  "targetResolution": { "message": "लक्ष्य रिज़ॉल्यूशन" },
+  "useMyScreen": { "message": "मेरी स्क्रीन इस्तेमाल करें" },
+  "outputSaving": { "message": "आउटपुट और सहेजना" },
+  "jpegQuality": { "message": "JPEG गुणवत्ता" },
+  "askWhereToSave": { "message": "पूछें कि कहाँ सहेजना है" },
+  "askWhereToSaveHint": { "message": "हर बार Chrome का सहेजें संवाद खोलता है। बंद = सीधे डाउनलोड फ़ोल्डर में (बिना पूछे सहेजने के लिए Chrome की \"हर फ़ाइल को सहेजने से पहले स्थान पूछें\" सेटिंग बंद करें)।" },
+  "savedTick": { "message": "सहेजा गया ✓" },
+  "btnDownload": { "message": "मेरे रिज़ॉल्यूशन पर क्रॉप करके डाउनलोड करें" },
+  "btnDownloading": { "message": "डाउनलोड हो रहा है…" },
+  "btnSaved": { "message": "सहेजा गया" },
+  "btnError": {
+    "message": "त्रुटि: $details$",
+    "placeholders": { "details": { "content": "$1" } }
+  },
+  "downloadFailed": { "message": "डाउनलोड विफल" },
+  "disclaimer": { "message": "अनौपचारिक · wallhaven.cc से संबद्ध नहीं" }
+}

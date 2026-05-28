@@ -1,0 +1,20 @@
+{
+  "appDesc": { "message": "Baixe papéis de parede do wallhaven.cc com um clique, recortados ao centro e dimensionados para a sua resolução." },
+  "headerSubtitle": { "message": "recorte e baixe na sua resolução" },
+  "targetResolution": { "message": "Resolução alvo" },
+  "useMyScreen": { "message": "Usar minha tela" },
+  "outputSaving": { "message": "Saída e salvamento" },
+  "jpegQuality": { "message": "Qualidade JPEG" },
+  "askWhereToSave": { "message": "Perguntar onde salvar" },
+  "askWhereToSaveHint": { "message": "Abre a caixa de diálogo Salvar do Chrome todas as vezes. Desativado = direto para Downloads (desative a opção \"perguntar onde salvar cada arquivo\" do Chrome para não perguntar)." },
+  "savedTick": { "message": "Salvo ✓" },
+  "btnDownload": { "message": "Baixar recortado na minha resolução" },
+  "btnDownloading": { "message": "Baixando…" },
+  "btnSaved": { "message": "Salvo" },
+  "btnError": {
+    "message": "Erro: $details$",
+    "placeholders": { "details": { "content": "$1" } }
+  },
+  "downloadFailed": { "message": "Falha no download" },
+  "disclaimer": { "message": "Não oficial · sem afiliação com o wallhaven.cc" }
+}

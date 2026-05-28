@@ -1,0 +1,20 @@
+{
+  "appDesc": { "message": "wallhaven.cc duvar kağıtlarını tek tıkla indirin; ortadan kırpılır ve hedef çözünürlüğünüze ölçeklenir." },
+  "headerSubtitle": { "message": "Görselleri istediğiniz çözünürlüğe kırpıp indirin" },
+  "targetResolution": { "message": "Hedef çözünürlük" },
+  "useMyScreen": { "message": "Ekranımı kullan" },
+  "outputSaving": { "message": "Çıktı ve kaydetme" },
+  "jpegQuality": { "message": "JPEG kalitesi" },
+  "askWhereToSave": { "message": "Nereye kaydedileceğini sor" },
+  "askWhereToSaveHint": { "message": "Açık olduğunda her seferinde Chrome'un Kaydet penceresini açar.\nKapatıldığında doğrudan İndirilenler klasörüne kaydeder.\nÇalışması için Chrome'un \"her dosyayı kaydetmeden önce nereye kaydedileceğini sor\" ayarını kapatın." },
+  "savedTick": { "message": "Kaydedildi ✓" },
+  "btnDownload": { "message": "Çözünürlüğüme kırpılmış indir" },
+  "btnDownloading": { "message": "İndiriliyor…" },
+  "btnSaved": { "message": "Kaydedildi" },
+  "btnError": {
+    "message": "Hata: $details$",
+    "placeholders": { "details": { "content": "$1" } }
+  },
+  "downloadFailed": { "message": "İndirme başarısız" },
+  "disclaimer": { "message": "Resmi değildir · wallhaven.cc ile bağlantılı değildir" }
+}

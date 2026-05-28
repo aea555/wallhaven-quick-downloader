@@ -1,0 +1,20 @@
+{
+  "appDesc": { "message": "تنزيل خلفيات wallhaven.cc بنقرة واحدة، مع اقتصاص من المنتصف وتحجيم إلى الدقة المطلوبة." },
+  "headerSubtitle": { "message": "اقتصاص وتنزيل بدقة شاشتك" },
+  "targetResolution": { "message": "الدقة المستهدفة" },
+  "useMyScreen": { "message": "استخدام شاشتي" },
+  "outputSaving": { "message": "الإخراج والحفظ" },
+  "jpegQuality": { "message": "جودة JPEG" },
+  "askWhereToSave": { "message": "السؤال عن مكان الحفظ" },
+  "askWhereToSaveHint": { "message": "يفتح مربع حوار الحفظ في Chrome في كل مرة. معطّل = مباشرةً إلى مجلد التنزيلات (أوقف إعداد \"السؤال عن مكان حفظ كل ملف\" في Chrome لتجنّب السؤال)." },
+  "savedTick": { "message": "تم الحفظ ✓" },
+  "btnDownload": { "message": "تنزيل مقتصّ على دقة شاشتي" },
+  "btnDownloading": { "message": "جارٍ التنزيل…" },
+  "btnSaved": { "message": "تم الحفظ" },
+  "btnError": {
+    "message": "خطأ: $details$",
+    "placeholders": { "details": { "content": "$1" } }
+  },
+  "downloadFailed": { "message": "فشل التنزيل" },
+  "disclaimer": { "message": "غير رسمي · غير تابع لـ wallhaven.cc" }
+}

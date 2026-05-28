@@ -1,0 +1,31 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node tooling (if added later)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Packaging / publishing artifacts
+*.zip
+*.crx
+*.pem
+web-ext-artifacts/
+dist/
+build/
+
+# Logs & secrets
+*.log
+.env
+
+# Raw screenshot captures (local inputs for the store-screenshot-*.png assets)
+download_button_on_picture.png
+popup.png
