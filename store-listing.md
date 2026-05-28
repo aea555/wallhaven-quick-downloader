@@ -1,7 +1,8 @@
 # Chrome Web Store listing copy
 
 Paste these into the Web Store developer dashboard when publishing. Nothing here
-ships in the extension package.
+ships in the extension package. The description field is **plain text only** (no
+Markdown/HTML) — bare URLs auto-link, so leave links unwrapped.
 
 ## Name
 
@@ -34,34 +35,59 @@ PERMISSIONS
 • Storage — to remember your resolution and preferences
 • Access to wallhaven.cc / w.wallhaven.cc — to read thumbnails and fetch the full image
 
-This extension does not collect or transmit any personal data.
+OPEN SOURCE
+Source code: https://github.com/aea555/wallhaven-quick-downloader
 
+This extension does not collect or transmit any personal data.
 Unofficial — not affiliated with, or endorsed by, wallhaven.cc.
 ```
 
-## Permission justifications
+## Link fields (render as proper links on the listing)
 
-The dashboard asks for a justification per permission:
+- **Homepage URL:** `https://github.com/aea555/wallhaven-quick-downloader`
+- **Support URL:** `https://github.com/aea555/wallhaven-quick-downloader/issues`
 
-- **downloads** — Saves the cropped/scaled wallpaper to the user's computer via
-  `chrome.downloads` when they click the download button.
-- **storage** — Persists the user's target resolution and preferences via
-  `chrome.storage.sync`.
-- **Host `https://wallhaven.cc/*`** — The content script runs on wallhaven.cc
-  listing pages to add the download button and read each wallpaper's id and
-  format from the thumbnail.
-- **Host `https://w.wallhaven.cc/*`** — The background worker fetches the
-  full-resolution image bytes from w.wallhaven.cc to crop and scale them.
+## Privacy practices form (Gizlilik tab)
 
-## Data use / privacy
+### Single purpose
 
-Certify **"does not collect user data."** True — nothing leaves the browser
-except the image fetch from wallhaven itself. Settings are stored locally via
+```
+Wallhaven Quick Downloader has a single purpose: let users download wallpapers from wallhaven.cc listing pages in one click, cropped and scaled to their chosen resolution. It adds a download button to each thumbnail; clicking it fetches the full-resolution image, center-crops and scales it to the user's target resolution, and saves it — without opening each wallpaper page.
+```
+
+### Permission justifications (max 1,000 chars each)
+
+**downloads**
+```
+Used to save the processed (cropped and scaled) wallpaper to the user's computer via chrome.downloads.download when they click the download button. This is the extension's core action.
+```
+
+**storage**
+```
+Used to remember the user's preferences — target resolution, JPEG quality, and the "ask where to save" toggle — via chrome.storage.sync, so they persist across sessions and sync across the user's devices.
+```
+
+**Host permission**
+```
+Access to wallhaven.cc lets the content script run on listing pages to add the download button and read each wallpaper's ID and file type from the thumbnail. Access to w.wallhaven.cc lets the background service worker fetch the full-resolution image so it can be cropped and scaled. Requests go only to wallhaven's own servers, and only when the user clicks a download button. No data is sent to any third party.
+```
+
+### Remote code
+
+Answer **No — does not use remote code.** All JavaScript is bundled in the
+package; the font is a local file; fetching images from wallhaven is data, not
+code. There is no eval(), no external scripts, and no remotely loaded modules.
+
+### Data use
+
+Certify **"does not collect user data."** Nothing leaves the browser except the
+image fetch from wallhaven itself. Settings are stored locally via
 `chrome.storage.sync`. No privacy-policy URL is required.
 
 ## Listing assets checklist
 
-- [ ] At least one screenshot, 1280×800 or 640×400 (PNG/JPEG)
-- [ ] Store icon 128×128 (can reuse `icons/icon128.png`)
+- [x] Screenshots, 1280×800 — `store-screenshot-1-grid.png`,
+      `store-screenshot-2-popup.png`, `store-screenshot-3-popup-tr.png` (Turkish)
+- [x] Store icon 128×128 — reuse `icons/icon128.png`
 - [ ] Category (e.g. Productivity or Photos)
-- [ ] Language: English (default)
+- [ ] Languages: English (default) + Turkish
