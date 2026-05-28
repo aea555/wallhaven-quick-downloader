@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "__MSG_appName__",
+  "name": "Wallhaven Quick Downloader",
   "version": "1.0.0",
   "description": "__MSG_appDesc__",
   "default_locale": "en",
@@ -23,7 +23,7 @@
   ],
   "action": {
     "default_popup": "src/popup.html",
-    "default_title": "__MSG_appName__",
+    "default_title": "Wallhaven Quick Downloader",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
